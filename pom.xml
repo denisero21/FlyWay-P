@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>FlyWay-P</name>
     <description>FlyWay-P</description>
+    <packaging>jar</packaging>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -43,22 +44,20 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>sc-gw-adc-db</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.flywaydb</groupId>-->
-<!--                <artifactId>flyway-maven-plugin</artifactId>-->
-<!--                <version>9.22.3</version>-->
-<!--                <configuration>-->
-<!--                    <url>jdbc:postgresql://localhost:5432/flyway</url>-->
-<!--                    <user>postgres</user>-->
-<!--                    <password>password</password>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
-
 </project>
