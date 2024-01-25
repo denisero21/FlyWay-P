@@ -1,0 +1,6 @@
+[submodule "sc-gw-adc-db"]
+	path = sc-gw-adc-db
+	url = https://bitbucket.softclub.by/scm/nb/sc-gw-adc-db.git
+    branch = main
+    fetchRecurseSubmodules = true
+    ignore = all
